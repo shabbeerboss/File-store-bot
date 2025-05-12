@@ -14,23 +14,8 @@ def start(update, context):
     args = context.args
     if args:
         param = args[0]
-        if param in file_mapping:
+    n file_mapping:
             file_id = file_mapping[param]
             context.bot.send_document(chat_id=update.effective_chat.id, document=file_id)
-        else:
-            update.message.reply_text("Invalid link or file not found.")
-    else:
-        update.message.reply_text("Please click a correct link from the channel.")
-
-def main():
-    updater = Updater(TOKEN, use_context=True)
-    dp = updater.dispatcher
-
-    dp.add_handler(CommandHandler("start", start))
-
-    print("Bot is running...")
-    updater.start_polling()
-    updater.idle()
-
-if __name__ == '__main__':
-    main()
+     
+            updsage.re
